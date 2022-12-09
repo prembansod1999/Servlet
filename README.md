@@ -5,8 +5,6 @@ Use jakarta instead of javax in tomcat 10
 Ex. 
 import jakarta.servlet.*;
 
-Everything else is same as javax.servlet.*.
-
 To see Response on web page 
 
 1. use res objects method setContentType method to provide the content type
@@ -18,7 +16,7 @@ EX:
 ServletResponse res;
 res.setContentType("text/html");
 PrintWriter out = res.getWriter();
-out.println("<h1>Welcome To Servlet</h1>");
+# out.println("<h1>Welcome To Servlet</h1>");
 
 ------------------------------------------------
 
