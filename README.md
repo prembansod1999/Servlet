@@ -209,3 +209,39 @@ If Client send name to first servlet then first servlet is able to print that na
 
 
 ------------------------------------------------
+
+# Cookies in Servlet:
+
+
+Cookies are the textual information stored in key value pair format to the clients browser during multiple request.
+
+When Client send request to the server for first time server send response along with the cookies. This cookies are stored in the client browser. when client send request second time then the server parse the cookies and check if these is the same user and give response otherwise if it finds another cookies then server ask for the login to the user again and treat as stateless server.
+
+
+How to use cookies in java:
+
+There is Cookie Class Present in the javax.servlet.http package. 
+
+To make Cookie object pass name and value in the cookie class object.
+
+Ex:
+
+username = "ABC"
+
+Cookie c = new Cookie("name",username)
+resp.addCookie(c) //To add Cookies in response
+
+If you want to take the get Cookies for the request there may be multiple cookies hence getCookies() method of HttpServletRequest Class Return the array of cookies.
+
+Cookies arr[] = req.getCookies();
+
+Disadvantages of Cookies:
+
+1. You are not able to pass space in the name you are passing in the cookies.
+
+Ex:
+
+"Prem" is accepted in cookies.
+"Prem Bansod" is not accepted in cookies.
+
+------------------------------------------------
