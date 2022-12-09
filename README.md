@@ -51,3 +51,35 @@ To execute Servlet we need to do mapping. Tell server we have created servlet ap
 To do mapping use "web.xml" file it is also known as deployment descriptor.
 
 ------------------------------------------------
+Servlet declaration has two tags which needs to be added in the <servlet></servlet> tags.
+1. <servlet-name> Any name Ex.(prem) </servlet-name> . this is used to provide name to the servlet class which class is declared below in servlet-class tags.  
+2. <servlet-class></servlet-class> . This is used to provide name of the full class using package name. Ex. if com is package and First is name of class then provide it as <servlet-class>com.First</servlet-class>
+
+Ex:
+<servlet>
+	<servlet-name>prem</servlet-name>
+	<servlet-class>com.First</servlet-class>
+</servlet>
+
+------------------------------------------------
+
+Servlet Mapping tag is <servlet-mapping></servlet-mapping>
+
+It has also two attribute
+1. <servlet-name>Name of Servlet same as declared above</servlet-name>
+2. <url-pattern>/web</url-pattern> url is declared in this tag
+
+Ex.
+
+<servlet-mapping>
+	<servlet-name>prem</servlet-name>
+	<url-pattern>/web</url-pattern>
+</servlet-mapping>
+
+------------------------------------------------
+
+# Generic Servlet:
+
+GenericServlet class is used to implements the Servlet interface and implements 4 methods body but take 1 method abstract is service() method.
+
+------------------------------------------------
