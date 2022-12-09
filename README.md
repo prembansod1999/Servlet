@@ -167,10 +167,45 @@ reqdisp.forward(req,res);
 
 ------------------------------------------------
 
-Deployment Descriptor:
+# Deployment Descriptor:
 
 It is file that contains configuration of java web application it is also known as "web.xml".
 The location of this file must be inside the WEB_INF Folder.
+
+
+------------------------------------------------
+
+------------------------------------------------
+
+
+# Session Tracking in Servlet:
+
+1. Session Tracking is technique to manage the session state(data) of the user.
+2. It is also known as state management.
+
+We know that http is stateless Protocol.
+
+What is Stateless Protocol?
+
+Stateless Protocol is protocol in which whenever server receives a request from client it will treat as new request coming to the server even though it is coming from same source or for same reason. Server doesn't remember data for any request.
+
+Ex.
+
+If client send request to server to see client details. For the first time server ask him for login details and then shows the user details. after that if user doesn't logout server should not ask for login again and directly show the user details but in statlesss as it treat every request as new request the number of times user want to see his user details number of time he neeed to login and follow the same process which he follows for the first request.
+
+There are 4 session tracking techniques in java:
+
+1. Cookies
+2. Hidden form field
+3. URL Rewritting
+4. HttpSession
+
+------------------------------------------------
+
+
+# Why to Track Session?
+
+If Client send name to first servlet then first servlet is able to print that name but if client go to next servlet using sumbit button of the first servlet and try to print same name on the second servlet. Second servlet is not able to print the name which was printed by the first servlet. This Problem occurs as server is not able to remember the data of the user.
 
 
 ------------------------------------------------
