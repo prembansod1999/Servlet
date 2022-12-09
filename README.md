@@ -16,7 +16,7 @@ EX:
 ServletResponse res;
 res.setContentType("text/html");
 PrintWriter out = res.getWriter();
-# out.println("<h1>Welcome To Servlet</h1>");
+out.println("Welcome To Servlet");
 
 ------------------------------------------------
 
