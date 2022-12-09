@@ -245,3 +245,51 @@ Ex:
 "Prem Bansod" is not accepted in cookies.
 
 ------------------------------------------------
+# Connect Mysql to the Servlet.
+
+Add mysql-connector jar file in the webapps/WEB_INF/lib/ folder.
+
+To stop sending To next servlet use the ajax i.e. asynchronous javascript.
+
+$("#myform").on('submit', function(event) {
+	event.preventDefault(); //This function is responsible for stop sending To next servlet.
+}
+
+1. if The Form data contains only text fields then we can serialise the object in the javascript and use them.
+2. if the form contains the "Image" we are not able to "serialize" the form object. we need to use "FormData" class and store it in the "let" type object.
+
+Ex.
+
+let f = new FormData(this)
+
+------------------------------------------------
+
+"Part" class is used to store the image type content or file type content.
+Ex:
+Part obj = req.getPart("image");
+
+
+To store multimedia file provide the annotation "@MultiPartConfig" above the class Name.
+
+File.seprator is used to give seprator in filepath.
+
+Ex. if the project is running on linux it will take inbuild value as "/" if it is working on the windows it will take value as "\\".
+
+
+------------------------------------------------
+
+# URL Rewriting
+
+URL rewriting is process of appending or modifying any url structure while loading a page.
+
+Ex:
+
+any localhost website name/ then this shows the default page index.html
+
+but when we provide localhost webiste name?name=Prem at runtime then this is known as URL Rewriting as we take the input from url and print it.
+
+if we print name then it is prem
+
+if we change name=prem_Bansod and hit the website it will print that name provided in the url.
+
+------------------------------------------------
