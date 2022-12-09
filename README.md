@@ -284,9 +284,9 @@ URL rewriting is process of appending or modifying any url structure while loadi
 
 Ex:
 
-www.google.com then this shows the default page index.html
+any localhost website name/ then this shows the default page index.html
 
-but when we provide www.google.com?name=Prem at runtime then this is known as URL Rewriting as we take the input from url and print it.
+but when we provide localhost webiste name?name=Prem at runtime then this is known as URL Rewriting as we take the input from url and print it.
 
 if we print name then it is prem
 
