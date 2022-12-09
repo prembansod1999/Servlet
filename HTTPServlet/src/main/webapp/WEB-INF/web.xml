@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
+  <display-name>HTTPServlet</display-name>
+  <welcome-file-list>
+    <welcome-file>home.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>prem</servlet-name>
+  	<servlet-class>hservlet.HFirst</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>prem</servlet-name>
+  	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>register</servlet-name>
+  	<servlet-class>hservlet.RegisterServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>register</servlet-name>
+  	<url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>success</servlet-name>
+  	<servlet-class>hservlet.Sucess</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>success</servlet-name>
+  	<url-pattern>/hsuccess</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
