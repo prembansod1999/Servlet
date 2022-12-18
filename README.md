@@ -293,3 +293,68 @@ if we print name then it is prem
 if we change name=prem_Bansod and hit the website it will print that name provided in the url.
 
 ------------------------------------------------
+# Hidden Form Fields:
+
+Hidden form field is hidden textfield used for maintaining the state of the user.
+
+Ex:
+
+<input type="hidden" name="uname" value="Prem  Bansod"/>
+
+------------------------------------------------
+
+# Session Tracking using Http Session
+
+Session means small interval of time
+Used for state management
+
+
+Whenever request coming from server server create object of HttpSession interface and give session id to that request.
+
+when multiple request coming from same client session object is not created every time it is refered to the object which created at the first request.
+
+This created object is removed only if following three steps are happened.
+1. close the browser by client.
+2. invalidate the session by the client.
+3. time expired for the session
+
+HttpSession is present in the 
+
+javax.servlet.http.HttpSession
+
+or 
+
+jakarta.servlet.http.Httpsession
+
+It has following methods 
+
+1. setAttribute("key","value")
+2. getAttribute("key")
+3. getId()
+4. removeAttribute("key")
+5. invalidate() 
+
+To Get the HttpSession object use req object
+
+
+Ex:
+
+
+HttpSession obj = req.getSession()
+
+1. if we can't provide any parameter in this getSession() function it will create new session if session is not there otherwise return the existing session.
+2. if we provide true in the getSession(true) method then it will delete the existing session object and create new session object.
+3. if we provide false in the getSession(false) method then it will not delete the existing session object and return existing object if object is not created it will return null.
+
+
+------------------------------------------------
+
+# There is method known as response object.sendRedirect("Name of the Servlet")
+
+This method will direct to the next servlet but create new request object. Which leads to losing of data from the previous request object and thats why we are using HttpSession object to store the session and get the data for the same request.
+
+Ex:
+
+res.sendRedirect("servlet2")
+
+
